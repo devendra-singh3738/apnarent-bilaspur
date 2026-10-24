@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApnaRent | Bilaspur Property Rental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#">🏠 ApnaRent</a>
+    <button id="openPost">+ Property Post Karein</button>
+  </header>
+
+  <section class="hero">
+    <p class="tag">BILASPUR, CHHATTISGARH</p>
+    <h1>Apni jagah aasaani se dhoondhein.</h1>
+    <p>Ghar, room, plot aur zameen rent par dein ya dhoondhein.</p>
+
+    <div class="search-box">
+      <select id="searchType">
+        <option value="">Sabhi Properties</option>
+        <option>Ghar</option>
+        <option>Room</option>
+        <option>Plot</option>
+        <option>Zameen</option>
+        <option>PG</option>
+      </select>
+
+      <input id="searchLocation"
+             placeholder="Area, jaise Sarkanda">
+
+      <input id="searchBudget"
+             type="number"
+             placeholder="Maximum rent ₹">
+
+      <button id="searchBtn">Search</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="heading">
+      <div>
+        <h2>Available Properties</h2>
+        <p>Bilaspur aur aas-paas</p>
+      </div>
+      <span id="resultCount"></span>
+    </div>
+
+    <div class="categories">
+      <button data-type="">Sabhi</button>
+      <button data-type="Ghar">🏠 Ghar</button>
+      <button data-type="Room">🛏️ Room</button>
+      <button data-type="Plot">📐 Plot</button>
+      <button data-type="Zameen">🌱 Zameen</button>
+      <button data-type="PG">🏢 PG</button>
+    </div>
+
+    <div id="propertyGrid" class="property-grid"></div>
+
+    <section class="post-section">
+      <h2>Apni Property Rent Par Dein</h2>
+
+      <form id="postForm">
+        <input id="title" placeholder="Property ka naam" required>
+
+        <select id="type" required>
+          <option value="">Property type chunein</option>
+          <option>Ghar</option>
+          <option>Room</option>
+          <option>Plot</option>
+          <option>Zameen</option>
+          <option>PG</option>
+        </select>
+
+        <input id="location" placeholder="Area / location" required>
+
+        <input id="rent" type="number"
+               min="1" placeholder="Monthly rent ₹" required>
+
+        <input id="deposit" type="number"
+               min="0" placeholder="Security deposit ₹">
+
+        <input id="size" placeholder="Size / bedrooms / area">
+
+        <textarea id="description"
+                  placeholder="Property ki details"></textarea>
+
+        <input id="owner" placeholder="Owner ka naam" required>
+
+        <input id="phone" type="tel"
+               placeholder="Contact number" required>
+
+        <input id="image" type="url"
+               placeholder="Photo URL (optional)">
+
+        <button type="submit">Property Add Karein</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h3>🏠 ApnaRent</h3>
+    <p>Bilaspur mein property dhoondhne ka aasaan tareeka.</p>
+    <small>Property aur owner ko verify karne ke baad hi payment karein.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
